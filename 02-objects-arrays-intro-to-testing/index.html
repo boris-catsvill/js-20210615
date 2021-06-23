@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<script>
+  function printColor () {
+    const color = 'green';
+
+    return () => {
+      console.error(color);
+    };
+  }
+
+  const printer = printColor();
+
+  printer();
+
+</script>
