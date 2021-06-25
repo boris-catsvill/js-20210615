@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+<body></body>
+
+<div id="root"></div>
+
+<script>
+  class Component {
+    constructor(description) {
+      this.description = description;
+      this.render();
+    }
+
+    render () {
+      const element = document.createElement('div');
+
+      element.innerHTML = `
+        <h1>${this.description}</h1>
+        <div>
+          <ul>
+            <li>first</li>
+            <li>second</li>
+          </ul>
+        </div>
+      `;
+
+      this.element = element;
+    }
+  }
+
+  const component = new Component('some description');
+
+  root.append(component.element)
+
+</script>
+
+<script>
+
+</script>
